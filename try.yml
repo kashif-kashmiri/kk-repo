@@ -1,0 +1,16 @@
+---
+ - name: deleting user
+   hosts: vm2
+   tasks:
+    - name: deleting najaf
+      user:
+        name: najaf
+        state: absent 
+    - name: stoping a service
+      service:
+        name: firewalld
+        state: stopped
+  
+  
+
+
