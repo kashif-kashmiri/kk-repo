@@ -1,11 +1,11 @@
 ---
- - name: deleting user
+ - name: adding user
    hosts: vm2
    tasks:
-    - name: deleting najaf
+    - name: adding tahir
       user:
-        name: najaf
-        state: absent 
+        name: tahir
+        state: present 
     - name: stoping a service
       service:
         name: firewalld
