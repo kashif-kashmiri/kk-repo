@@ -2,9 +2,9 @@
  - name: adding user
    hosts: vm2
    tasks:
-    - name: adding tahir
+    - name: adding ziad
       user:
-        name: tahir
+        name: ziad
         state: present 
     - name: stoping a service
       service:
