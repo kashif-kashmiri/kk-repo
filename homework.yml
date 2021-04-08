@@ -1,0 +1,23 @@
+---
+  - name: home work
+    hosts: vm2
+    tasks:
+     - name: adding user
+       user:
+         name: ziad
+         state: present
+       notify:
+         - creating directory
+         - creating a file
+    handlers:
+     - name: creating directory
+       file:
+         path: /home/ziad/Ansible
+         state: directory
+     - name: creating a file
+       file:
+         path: /home/ziad/Ansible/hello
+         state: touch
+       become: yes
+          
+  
