@@ -1,6 +1,6 @@
 ---
  - name: adding user
-   hosts: vm2
+   hosts: vm1
    tasks:
     - name: adding ziad
       user:
